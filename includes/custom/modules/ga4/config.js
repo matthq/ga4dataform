@@ -44,7 +44,7 @@ const config = {
   // on a new or full build, this start date will be picked
   ENABLED: true,
   VERSION: 1,
-  GA4_START_DATE: "2020-01-01",
+  GA4_START_DATE: "2022-11-28",
 
   // custom definitions
   // a very complete list of all recommended and standard event parameters is
@@ -71,7 +71,24 @@ const config = {
   //    { name: "event_value", type: "decimal" },
   //    { name: "event_value", type: "string", renameTo: "event_value_string" }
   // ],
-  CUSTOM_EVENT_PARAMS_ARRAY: [],
+  CUSTOM_EVENT_PARAMS_ARRAY: [
+    { name: "global_page_path", type: "string" },
+    { name: "global_page_title", type: "string" },
+    { name: "http_status_code", type: "int" },
+    { name: "last_modified", type: "string" },
+    { name: "name", type: "string" },
+    { name: "category", type: "string" },
+    { name: "product_name", type: "string" },
+    { name: "csu_owner", type: "string" },
+    { name: "location", type: "string" },
+    { name: "value", type: "string" },
+    { name: "country_code_event", type: "string", renameTo: "country_code" },
+    { name: "generic_id", type: "string" },
+    { name: "page_template", type: "string" },
+    { name: "generic_value", type: "string" },
+    { name: "hreflang_id", type: "string" },
+    { name: "text", type: "string" }
+  ],
 
   // user properties
   // example:
